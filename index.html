@@ -6,233 +6,164 @@
     <title>My Notes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #282c34;
-        color: #49d76c;
-      }
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #282c34;
+}
 
-  header {
-    background-color: #3f3c3c;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  header div {
-    display: flex;
-    align-items: center;
-  }
-  
-  header img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 16px;
-  }
-  
-  header span {
-    font-size: 20px;
-  }
-  
-  header a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 8px;
-  }
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 16px;
-  }
-  
-  .note {
-    background-color: #353945;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 8px;
-    padding: 16px;
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .note img {
-    float: left;
-    margin-right: 16px;
-    max-width: 100px;
-    height: auto;
-  }
-  
-  h2 i {
-    margin-right: 8px;
-  }
-  
-  .note2 {
-    display: flex;
-    align-items: center;
-    margin-top: 16px;
-    padding: 16px;
-    background-color: #353945;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .note2 img {
-    max-width: 50px;
-    height: auto;
-    margin-right: 16px;
-  }
-  
-  .note2 h2 {
-    font-size: 16px;
-    margin: 0;
-  }
-  
-  .note2 p {
-    font-size: 14px;
-    margin: 0;
-  }
-  
+header {
+  background-color: #3f3c3c;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  max-width: 40px;
+  height: auto;
+  border-radius: 50%;
+}
+
+header span {
+  margin-left: 16px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 16px;
+}
+
+.note {
+  background-color: #353945;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  padding: 16px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.note img {
+  float: left;
+  margin-right: 16px;
+  max-width: 100px;
+  height: auto;
+}
+
+h2 {
+  color: #71bfb8;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+p {
+  color: #49d76c;
+  margin-top: 8px;
+}
+
+.note-date,
+.note-update {
+  font-size: 12px;
+  color: #8b8c8a;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.note2,
+.note3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #353945;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.note2 img,
+.note3 img {
+  max-width: 50px;
+  height: auto;
+  margin-right: 16px;
+}
+
+.note2 h2,
+.note3 h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #71bfb8;
+  font-weight: bold;
+}
+
+.note2 p,
+.note3 p {
+  font-size: 14px;
+  margin: 0;
+  color: #49d76c;
+  margin-top: 8px;
+}
+
+footer {
+  background-color: #f7f7f7;
+  color: #afafaf;
+  font-size: 16px;
+  text-align: center;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer i {
+  margin: 8px;
+  font-size: 24px;
+  color: #afafaf;
+}
+
+.contact-bar {
+  background-color: #f7f7f7;
+  color: #afafaf;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px;
+}
+
+.contact-bar a {
+  color: #afafaf;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .note,
+  .note2,
   .note3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-    background-color: #353945;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 200px;
-    width: 100%;
+    max-width: 100%;
   }
-  
-  .note3 img {
-    max-width: 30px;
-    height: auto;
-    margin-bottom: 8px;
-  }
-  
-  .note3 h2 {
-    font-size: 12px;
-    margin: 0;
-  }
-  
-  .note3 p {
-    font-size: 14px;
-    margin: 0;
-  }
-  
-  .note-date {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    font-size: 12px;
-    color: #8b8c8a;
-  }
-  
-  footer {
-    background-color: #f7f7f7;
-    color: #49d76c;
-    font-size: 16px;
-    text-align: center;
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  footer a {
-    color: #49d76c;
-    text-decoration: none;
-    margin: 0 8px;
-  }
-  
-  .contact-bar {
-    background-color: #3d0b54;
-    color: #49d76c;
-    font-size: 14px;
-    padding: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  
-  .contact-bar a {
-    color: #49d76c;
-    text-decoration: none;
-    margin-right: 8px;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    header {
-      font-size: 20px;
-    }
-    
-    header img {
-      width: 30px;
-      height: 30px;
-    }
-    
-    main {
-      margin: 8px;
-    }
-    
-    .note {
-      max-width: 100%;
-    }
-    
-    .note img {
-      max-width: 80px;
-    }
-    
-    .note2 {
-      max-width: 100%;
-    }
-    
-    .note2 img {
-      max-width: 40px;
-    }
-    
-    .note3 {
-      max-width: 100%;
-    }
-    
-    .note3 img {
-      max-width: 20px;
-    }
-    
-    footer {
-      font-size: 14px;
-      padding: 8px;
-    }
-    
-    .contact-bar {
-      font-size: 12px;
-      padding: 4px;
-    }
-  }
-</style>
+}
+
+    </style>
   </head>
   <body>
     <header>
       <div>
-        <img src="logo1.jpg" alt="Logo 1">
+        <img src="profile.jpg" alt="Profile Picture">
         <span>My Notes</span>
       </div>
       <div>
@@ -247,47 +178,56 @@
         <img src="image1.jpg" alt="Image 1">
         <h2><i class="fa fa-file-text-o"></i> Note Title</h2>
         <p>This is the content of my note.</p>
+        <span class="note-date">Date: 2023-05-18</span>
+        <span class="note-update">Last updated: 2023-05-18</span>
       </div>
       <div class="note">
         <img src="image2.jpg" alt="Image 2">
         <h2><i class="fa fa-file-text-o"></i> Note Title</h2>
         <p>This is the content of my note.</p>
+        <span class="note-date">Date: 2023-05-18</span>
+        <span class="note-update">Last updated: 2023-05-18</span>
       </div>
       <div class="note2">
         <img src="image3.jpg" alt="Image 3">
         <div>
-          <h2>Note Title</h2>
-          <p>This is the content of my note.</p>
+          <h2>Note 2 Title</h2>
+          <h2><i class="fa fa-file-text-o"></i> Note Title</h2>
+          <p>This is a single-line note with a smaller image, logo, heading, and paragraph.</p>
         </div>
+        <span class="note-date">Date: 2023-05-18</span>
+        <span class="note-update">Last updated: 2023-05-18</span>
       </div>
       <div class="note2">
-        <img src="image4.jpg" alt="Image 4">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image3.jpg" alt="Image 3">
         <div>
-          <h2>Note Title</h2>
-          <p>This is the content of my note.</p>
+          <h2>Note 2 Title</h2>
+          <h2><i class="fa fa-file-text-o"></i> Note Title</h2>
+          <p>This is a multi-line note with a larger image, logo, heading, and paragraph.</p>
         </div>
+        <span class="note-date">Date: 2023-05-18</span>
+        <span class="note-update">Last updated: 2023-05-18</span>
       </div>
       <div class="note3">
-        <img src="image5.jpg" alt="Image 5">
-        <h2>Note Title</h2>
-        <p>This is the content of my note.</p>
-        <!-- <span class="note-date">18 May 2023</span> -->
+        <img src="image4.jpg" alt="Image 4">
+        <h2>Note 3 Title</h2>
+        <p>This is a note with a logo, heading, and paragraph aligned vertically.</p>
+        <span class="note-date">Date: 2023-05-18</span>
+        <span class="note-update">Last updated: 2023-05-18</span>
       </div>
     </main>
     <footer>
-      <p>&copy; 2023 My Notes. All rights reserved.</p>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
     </footer>
     <div class="contact-bar">
-      <div>
-        <a href="tel:123456789">123-456-789</a>
-        <a href="mailto:info@mynotes.com">info@mynotes.com</a>
-      </div>
-      <div>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-      </div>
+      <a href="mailto:contact@example.com"><i class="fa fa-envelope"></i> contact@example.com</a>
+      <a href="tel:+1234567890"><i class="fa fa-phone"></i> +1234567890</a>
     </div>
   </body>
 </html>
